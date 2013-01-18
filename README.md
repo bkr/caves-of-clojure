@@ -1,9 +1,10 @@
-# caves-of-clojure
+# Rafter's Caves of Clojure Bootcamp
+
 https://github.com/bkr/caves-of-clojure
 
-A Clojure library designed to ... well, that part is up to you.
-
-
+Following http://stevelosh.com/blog/2012/07/caves-of-clojure-01/
+which was originally inspired by
+http://trystans.blogspot.com/2011/08/roguelike-tutorial-01-java-eclipse.html
 
 # Set up your environment
 The "Bundler + IRB of Clojure: Leiningen"
@@ -17,12 +18,6 @@ http://jrheard.tumblr.com/post/40024238467/getting-started-with-clojure
 
 Recommended OReilly book:
 http://shop.oreilly.com/product/0636920013754.do
-
-## Usage
-
-FIXME
-
-## License
 
 Copyright © 2013 Rafter, Inc.
 
