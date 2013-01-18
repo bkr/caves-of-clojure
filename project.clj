@@ -6,4 +6,5 @@
     [org.clojure/clojure "1.4.0"]
     [clojure-lanterna "0.9.0"]
   ]
+  :main caves-of-clojure.core
 )
