@@ -21,4 +21,4 @@ http://shop.oreilly.com/product/0636920013754.do
 
 Copyright © 2013 Rafter, Inc.
 
-All rights reserved
+Licensed MIT/X11
