@@ -54,10 +54,38 @@
 (defn get-input [game screen]
   (assoc game :input (lanterna-screen/get-key-blocking screen)))
 
+(defn run-game [input-game screen]
+  (loop [{:keys [input uis] :as loop-game} input-game]
+    (when-not (empty? uis)
+      (draw-game loop-game screen)
+      (if (nil? input)
+        (recur (get-input loop-game screen))
+        (recur (process-input (dissoc loop-game :input) input))))))
 
+(defn new-game []
+  (new Game
+    (new World)
+    [(new UI :start)]
+    nil))
 
 ; This is the run function
-(defn run [screen-type])
+(defn run
+  ([screen-type]
+    (run screen-type false))
+  ([screen-type block?]
+    (letfn [(go []
+              (let [screen (lanterna-screen/get-screen screen-type)]
+                (lanterna-screen/in-screen screen
+                  (run-game (new-game) screen))))]
+      (if block?
+        (go)
+        (future (go))))))
 
-; Ths is -main
-(defn -main [& args])
+; This is -main
+(defn -main [& args]
+  (let [args (set args)
+        screen-type (cond
+                      (args ":swing") :swing
+                      (args ":text") :text
+                      :else :auto)]
+    (run screen-type true)))
