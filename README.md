@@ -19,6 +19,6 @@ http://jrheard.tumblr.com/post/40024238467/getting-started-with-clojure
 Recommended OReilly book:
 http://shop.oreilly.com/product/0636920013754.do
 
-Copyright © 2013 Rafter, Inc.
+Copyright © 2012-2013 Steve Losh, Stephen Sloan, et al.
 
 Licensed MIT/X11
