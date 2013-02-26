@@ -2,7 +2,6 @@
   (:require [lanterna.screen :as lanterna-screen]))
 
 (defrecord UI [kind])
-(defrecord World [])
 (defrecord Game [world uis input])
 
 (defn clear-screen [screen]
